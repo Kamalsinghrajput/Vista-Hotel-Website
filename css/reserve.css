@@ -1,0 +1,144 @@
+* {
+  font-family: "kalam";
+}
+
+body {
+  background-color: black;
+  margin: unset;
+  color: white;
+  overflow: hidden;
+}
+
+#myVideo {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.navbar {
+  font-family: "kalam";
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 12px;
+  font-size: 24px;
+}
+
+.nav-options a:not(:last-child) {
+  padding-right: 8px;
+  border-right: 2px solid white;
+}
+
+.navbar a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar a:hover:not(.active) {
+  background-color: #111;
+}
+
+.heading {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  align-content: center;
+}
+
+.details {
+  right: 0;
+  left: 0;
+  top: 0;
+  line-height: 2rem;
+  font-family: "kalam";
+}
+
+.form {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  background-color: hsl(0 0% 20% / 0.8);
+  transform: translate(-50%, -50%);
+  border-radius: 3rem;
+}
+
+.details-content {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input-label {
+  min-width: 100px;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+@media (max-width: 55em) {
+  .navbar {
+    flex-direction: column;
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    padding-inline: 0;
+    transform: translateX(120%);
+    z-index: 100;
+    transition: transform 350ms ease-out;
+  }
+
+  .nav-options {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .nav-options a:not(:last-child) {
+    border-right: none;
+  }
+
+  .toggle-btn {
+    display: block;
+    position: absolute;
+    right: 1.8rem;
+    width: 2rem;
+    height: 2rem;
+    top: 1rem;
+    z-index: 999;
+    background-image: url(/photos/menu.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+
+  .tag-1 {
+    font-size: 3rem;
+  }
+
+  .card-wrapper {
+    line-height: 2rem;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
+  .navbar[data-visible="true"] {
+    transform: translateX(0);
+  }
+
+  .toggle-btn[aria-expanded="true"] {
+    background-image: url(/photos/close.png);
+  }
+}

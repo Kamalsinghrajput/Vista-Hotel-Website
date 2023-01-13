@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Hotel</title>
+    <link rel="stylesheet" href="css/reserve.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anybody&family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+    <script src="reserve.js" charset="utf-8" defer></script>
+  </head>
+  <body>
+    <section>
+      <button class="toggle-btn" aria-expanded="false"></button>
+      <div class="navbar" data-visible="false">
+        <div class="home">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="nav-options">
+          <a href="/index.html#about">About</a>
+          <a href="/index.html#footer">Contact</a>
+          <a href="/index.html#pricing">Pricing</a>
+        </div>
+      </div>
+      <video autoplay muted loop id="myVideo">
+        <source src="video/hotel.mp4" type="video/mp4" />
+      </video>
+    </section>
+    <section class="details">
+      <form class="form">
+        <div class="details-content">
+          <h2>Please fill the required details</h2>
+          <div class="input-wrapper">
+            <label class="input-label" for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" value="" />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label" for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" value="" />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label" for="mobile-no.">Mobile-No.:</label>
+            <input type="text" id="mobile" name="mobile" value="" />
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label" for="email">E-mail:</label>
+            <input type="text" id="email" name="email" value="" />
+          </div>
+          <div>
+            <div>Choose your ID-Proof:</div>
+            <input type="radio" id="aadhar" name="id" value="" />
+            <label for="aadhar">Aadhar-Card</label>
+            <input type="radio" id="css" name="id" value="" />
+            <label for="pan">PAN-Card</label>
+            <input type="radio" id="license" name="id" value="" />
+            <label for="license">Driving-License</label>
+          </div>
+          <div class="input-wrapper">
+            <label class="input-label" for="id-no.">ID-Number:</label>
+            <input type="text" id="number" name="" value="" />
+          </div>
+          <div>
+            <div>Choose your Plan:</div>
+            <input type="radio" id="luxury" name="plan" value="" />
+            <label for="luxury">Luxury</label>
+            <input type="radio" id="premium" name="plan" value="" />
+            <label for="premium">Premium</label>
+            <input type="radio" id="deluxe" name="plan" value="" />
+            <label for="deluxe">Deluxe</label>
+          </div>
+          <div class="submit-btn">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
